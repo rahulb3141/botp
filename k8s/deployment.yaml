@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eks-webapp-deploy
+  labels:
+    app: eks-webapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: eks-webapp
+  template:
+    metadata:
+      labels:
+        app: eks-webapp
+    spec:
+      containers:
+      - name: webapp
+        image: 941960167356.dkr.ecr.us-east-1.amazonaws.com/eks-webapp:latest
+        ports:
+        - containerPort: 3000
