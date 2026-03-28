@@ -1,7 +1,7 @@
 # Use official Node.js runtime image (Alpine = lightweight)
 FROM node:18-alpine
 
-# Set working directory
+## Set working directory
 WORKDIR /app
 
 # Copy package files first to leverage Docker cache
