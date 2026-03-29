@@ -18,3 +18,5 @@ EXPOSE 3000
 
 # Start Node app
 CMD ["node", "src/index.js"]
+
+# testing the commit
