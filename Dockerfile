@@ -4,7 +4,7 @@ FROM node:18-alpine
 ## Set working directory
 WORKDIR /app
 
-# Copy package files first to leverage Docker cache
+## Copy package files first to leverage Docker cache
 COPY app/package*.json ./
 
 ## Install only production dependencies
